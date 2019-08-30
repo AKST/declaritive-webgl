@@ -2,7 +2,7 @@
 authors = ["Angus Thomsen"]
 categories = ["wasm"]
 description = "The runtime for my web application"
-license = "Apache-2.0/MIT"
+license = "MIT"
 name = "webpack-demo"
 readme = "./README.md"
 version = "0.1.0"
