@@ -1,44 +1,27 @@
-Rust + Typescript WebGl Demo
+Declarive WebGl Render-er
 =========================
 
-Just wanted to test some web gl stuff with web assembly & typescript.
-Originally I wanted to use glitch.com but they don't support rust beyond
-cargo build without any dependencies at the moment (but their support
-pages straight up say they don't support it).
+The goal of this project is to write a declartive render-er that uses web gl,
+for games or for user interfaces, in such that your logic can be represented
+as pure function, not procedural code.
 
-## Running Locally
+I don't really expect this to be the more performant way of rendering using
+web gl, so this is more of a learning exercise.
 
-### Dependencies
+## Building
 
-- [`Cargo`][cargo] to build rust
-- [`wasm-pack`][wasmpack] for wasm things
-- Either [Yarn], [npm], or whatever js package manager, although
-  you may want to update the script for starting to use your package
-  manager, if you're not using yarn.
+```
+yarn && yarn build
+```
 
-[npm]: https://www.npmjs.com/
-[Yarn]: https://yarnpkg.com/en/
-[cargo]: https://crates.io/
-[wasmpack]: https://github.com/rustwasm/wasm-pack
+## Running
 
-## Project Layout
+```
+./scripts/start.bash
+```
 
-### TypeScript + CSS, DOM wrapper.
+## Project Structure
 
-Anyways there is a light typescript wrapper around the web assembly portion
-that gets the canvas, context, shaders, and tracks bounds of the canvas. So
-you could techinically drop the canvas into another application and it'll
-scale to the window bounds it is placed in, but that is kinda incidential.
-All this lives in `src`.
-
-### Shader Location.
-
-Since I use webpack to make bundling the application alot simpler to avoid
-having to use ajax calls to get the shader source or do that hacky thing
-were you put the shader in a sciprt tag. I can just import the shaders as
-normal modules. The shaders live in `src/shaders`.
-
-### Rust Core.
-
-Rust portion all lives in `runtime`, and the bulk of the logic takes place
-in here. Bindings to the binary are generated with `wasm-bindgen`.
+ATM this is written more like an application, this is mostly for experimentation
+purposes, however it'll be refactored in to a library once there is something
+worth salvaging.

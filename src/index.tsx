@@ -36,8 +36,6 @@ function main() {
           width,
           height,
           onError,
-          vertShader,
-          fragShader,
       )
   );
 
