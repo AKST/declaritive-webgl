@@ -19,6 +19,7 @@ extern "C" {
 
 #[wasm_bindgen(js_name = "start_runtime")]
 pub fn start_runtime(maybe_context: JsValue) -> Result<(), JsValue> {
+  log("starting runtime");
   return maybe_context.dyn_into::<WebGlRenderingContext>()
     .map(|context| ())
     .map_err(|value| {
