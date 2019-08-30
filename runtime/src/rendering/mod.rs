@@ -8,7 +8,6 @@ trait StdLib {
     fn create_element<P>(&mut self, component: impl Fn(P, &mut Self) -> UINode, props: P) -> UINode;
 }
 
-
 struct UI {
 
 }
@@ -49,7 +48,7 @@ fn message_component<S: StdLib>(props: MessageProps, stdlib: &mut S) -> UINode {
     UINode {}
 }
 
-fn main() {
-    let mut ui = UI {};
-    ui.create_element(message_component, MessageProps {});
-}
+// fn main() {
+//     let mut ui = UI {};
+//     ui.create_element(message_component, MessageProps {});
+// }

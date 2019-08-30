@@ -37,6 +37,7 @@ features = [
   "Text",
   "WebGlBuffer",
   "WebGlProgram",
+  "WebGlRenderingContext",
   "WebGl2RenderingContext",
   "WebGlShader",
   "WebGlUniformLocation",
