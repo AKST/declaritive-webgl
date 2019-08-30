@@ -2,6 +2,7 @@
 authors = ["Angus Thomsen"]
 categories = ["wasm"]
 description = "The runtime for my web application"
+repository = "git@github.com:AKST/declaritive-webgl.git"
 license = "MIT"
 name = "webpack-demo"
 readme = "./README.md"
